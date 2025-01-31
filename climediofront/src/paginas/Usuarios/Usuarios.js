@@ -5,7 +5,7 @@ import { Form, Link } from "react-router-dom";
 import { Table } from "react-bootstrap";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useEffect, useState } from "react";
-import UsuarioApi from "../../services/UsuarioApi";
+import UsuarioApi from "../../services/Usuario.Api";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
@@ -61,7 +61,7 @@ function Usuarios() {
         <div className={style.pagina_conteudo}>
           <div className={style.pagina_cabecalho}>
             <h3>Usuarios</h3>
-            <Link to="/usuario/novo" className={style.botao_novo}>
+            <Link to="/NovoUsuario" className={style.botao_novo}>
               + Novo
             </Link>
           </div>

@@ -17,7 +17,7 @@ function Sidebar({ children }) {
                 <div className={style.sidebar_corpo}>
                     <SidebarItem texto="Usuarios" link="/usuarios" logo={<MdGroup />} />
                     <SidebarItem texto="Agendamentos" link="/agendamentos" logo={<MdInbox />} />
-                    <SidebarItem texto="Serviços" link="/serviços" logo={<MdSort />} />
+                    <SidebarItem texto="Serviços" link="/servicos" logo={<MdSort />} />
                 </div>
             </div>
             <div className={style.pagina_conteudo}>

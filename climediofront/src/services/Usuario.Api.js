@@ -73,7 +73,7 @@ const UsuarioApi = {
 
     async listarTiposUsuarioAsync() {
         try {
-            const response = await HTTPClient.get(`/Usuario/ListarTiposUsuario`);
+            const response = await HTTPClient.get(`/Usuario/ListarTipoUsuario`);
             return response.data;
         } catch (error) {
             console.error("Erro ao listar tipos de usuário:", error);
@@ -113,16 +113,6 @@ const UsuarioApi = {
         }
 
         const response = await HTTPClient.post(`Usuario/VerificarLogin`, usuario);
-        return response.data;
-    },
-
-    async listarUsuarios() {
-        const response = await HTTPClient.get(`Usuario/ListarUsuarios`);
-        return response.data;
-    },
-
-    async listarTiposUsuarios() {
-        const response = await HTTPClient.get(`Usuario/ListarTiposUsuario`);
         return response.data;
     }
 }
