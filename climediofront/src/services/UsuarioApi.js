@@ -23,24 +23,26 @@ const UsuarioApi = {
         }
     },
 
-    async criarAsync(nome, email, tipoUsuarioId, senha) {
+    async criarAsync(nome, nomeSocial, cpf, telefone, dataNascimento, email, tipoUsuario, senha, endereco) {
         try {
-
-            console.log("asasas", nome, " ", tipoUsuarioId)
-
             const usuarioCriar = {
-                nome: nome,
-                email: email,
-                senha: senha,
-                tipo: Number(tipoUsuarioId)
+                Nome: nome,
+                Email: email,
+                Senha: senha,
+                TipoUsuario: Number(tipoUsuario),
+                Cpf: cpf,
+                NomeSocial: nomeSocial,
+                Telefone: telefone,
+                DataNascimento: dataNascimento,
+                Endereco: endereco
             };
 
-            const response = await HTTPClient.post('/Usuario/Criar', usuarioCriar);
+            console.log(usuarioCriar)
+            const response = await HTTPClient.post('/Usuario/Adicionar', usuarioCriar);
             
             return response.data;
         } catch (error) {
             console.error("Erro ao criar usuário:", error);
-            throw error;
         }
     },
 
@@ -61,9 +63,9 @@ const UsuarioApi = {
         }
     },
 
-    async deletarAsync(usuarioId) {
+    async deletarAsync(id) {
         try {
-            const response = await HTTPClient.delete(`/Usuario/Deletar/${usuarioId}`);
+            const response = await HTTPClient.delete(`/Usuario/Remover/${id}`);
             return response.data;
         } catch (error) {
             console.error("Erro ao deletar usuário:", error);
@@ -113,6 +115,26 @@ const UsuarioApi = {
         }
 
         const response = await HTTPClient.post(`Usuario/VerificarLogin`, usuario);
+        return response.data;
+    },
+
+    async listarUsuarios() {
+        const response = await HTTPClient.get(`Usuario/ListarUsuarios`);
+        return response.data;
+    },
+
+    async listarTiposUsuarios() {
+        const response = await HTTPClient.get(`Usuario/ListarTiposUsuario`);
+        return response.data;
+    },
+
+    async listarPacientes() {
+        const response = await HTTPClient.get(`Usuario/ListarUsuariosPacientes`);
+        return response.data;
+    },
+
+    async listarProfissionais() {
+        const response = await HTTPClient.get(`Usuario/ListarUsuariosProfissional`);
         return response.data;
     }
 }

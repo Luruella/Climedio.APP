@@ -1,4 +1,4 @@
-import style from '../SidebarItem/SidebarItem.module.css';
+import style from './Sidebaritem.module.css';
 import { Link } from 'react-router-dom';
 
 function SidebarItem({ texto, link, logo }) {

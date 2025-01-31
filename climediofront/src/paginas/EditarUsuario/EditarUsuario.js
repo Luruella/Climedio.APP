@@ -1,5 +1,5 @@
-import { Sidebar } from '../../componentes/Sidebar/Sidebar';
-import { Topbar } from '../../componentes/Topbar/Topbar';
+import Sidebar from '../../Componentes/Sidebar/Sidebar';
+import Topbar from '../../Componentes/Sidebar/Sidebar';
 import style from './EditarUsuario.module.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -34,7 +34,7 @@ export function EditarUsuario() {
     useEffect(() => {
         const buscarTiposUsuarios = async () => {
             try {
-                const tipos = await UsuarioApi.listarTiposUsuarioAsync();
+                const tipos = await UsuarioApi.listarTiposUsuarios();
                 setTiposUsuarios(tipos);
             } catch (error) {
                 console.error('Erro ao buscar tipos de usuário:', error);

@@ -8,24 +8,29 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { MdSave } from "react-icons/md";
 import Topbar from '../../Componentes/Topbar/Topbar';
-import UsuarioApi from '../../services/Usuario.Api';
+import UsuarioApi from '../../services/UsuarioApi';
 import Sidebar from '../../Componentes/Sidebar/Sidebar';
 
 
 export function NovoUsuario() {
 
     const [nome, setNome] = useState('');
+    const [nomeSocial, setNomeSocial] = useState('')
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [tipoUsuario, setTipoUsuario] = useState('');
     const [TiposUsuarios, setTiposUsuarios] = useState([]);
+    const [cpf, setCpf] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [endereco, setEndereco] = useState('');
+    const [dataNascimento, setDataNascimento] = useState('');
 
     const navigate = useNavigate();
 
     useEffect(() => {
         const fetchTipoUsuarios = async () => {
             try {
-                const tipos = await UsuarioApi.listarTiposUsuarioAsync();
+                const tipos = await UsuarioApi.listarTiposUsuarios();
                 setTiposUsuarios(tipos);
             } catch (error) {
                 console.error('Erro ao buscar tipos de usuários:', error);
@@ -38,7 +43,7 @@ export function NovoUsuario() {
         
         e.preventDefault();
         if (isFormValid()) {
-            await UsuarioApi.criarAsync(nome, email, tipoUsuario, senha);
+            await UsuarioApi.criarAsync(nome, nomeSocial, cpf, telefone, dataNascimento, email, tipoUsuario, senha, endereco);
             navigate('/usuarios')
         } else {
             alert('Por favor, preencha todos os campos.');
@@ -58,7 +63,6 @@ export function NovoUsuario() {
                     <h3>Novo Usuário</h3>
 
                     <br></br>
-
 
                     <Form onSubmit={handleSubmit}>
 
@@ -80,8 +84,8 @@ export function NovoUsuario() {
                                 type="text"
                                 placeholder="Digite seu Nome Social"
                                 name="Nome Social"
-                                value={"NomeSocial"}
-                                onChange={(e) => setNome(e.target.value)}
+                                value={nomeSocial}
+                                onChange={(e) => setNomeSocial(e.target.value)}
                                 required
                             />
                         </Form.Group>
@@ -92,8 +96,8 @@ export function NovoUsuario() {
                                 type="text"
                                 placeholder="Digite seu CPF"
                                 name="CPF"
-                                value={"CPF"}
-                                onChange={(e) => setNome(e.target.value)}
+                                value={cpf}
+                                onChange={(e) => setCpf(e.target.value)}
                                 required
                             />
                         </Form.Group>
@@ -104,8 +108,8 @@ export function NovoUsuario() {
                                 type="text"
                                 placeholder="Digite seu Telefone"
                                 name="Telefone"
-                                value={"Telefone"}
-                                onChange={(e) => setNome(e.target.value)}
+                                value={telefone}
+                                onChange={(e) => setTelefone(e.target.value)}
                                 required
                             />
                         </Form.Group>
@@ -113,11 +117,11 @@ export function NovoUsuario() {
                         <Form.Group controlId="Data Nascimento" className="mb-3">
                             <Form.Label>Data Nascimento</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="date"
                                 placeholder="Digite sua Data de Nascimento"
                                 name="CPF"
-                                value={"Data Nascimento"}
-                                onChange={(e) => setNome(e.target.value)}
+                                value={dataNascimento}
+                                onChange={(e) => setDataNascimento(e.target.value)}
                                 required
                             />
                         </Form.Group>
@@ -146,10 +150,33 @@ export function NovoUsuario() {
                             >
                                 <option value="">Selecione o tipo de usuário</option>
                                 {TiposUsuarios.map((tipo) => (
-                                    <option value={tipo.id}>{tipo.nome}</option>
+                                    <option value={tipo.key}>{tipo.value}</option>
                                 ))}
                             </Form.Control>
                         </Form.Group>
+
+                        <Form.Group controlId="formSenha" className="mb-3">
+                            <Form.Label>Senha</Form.Label>
+                            <Form.Control
+                                type="password"
+                                placeholder="Senha"
+                                name="senha"
+                                value={senha}
+                                onChange={(e) => setSenha(e.target.value)}
+                                required/>
+                        </Form.Group>
+
+                        <Form.Group controlId="formEndereco" className="mb-3">
+                            <Form.Label>Endereço</Form.Label>
+                            <Form.Control
+                                type="text"
+                                placeholder="Endereço"
+                                name="endereco"
+                                value={endereco}
+                                onChange={(e) => setEndereco(e.target.value)}
+                                required/>
+                        </Form.Group>
+                                
 
                         <Button variant='primary' type='submit' disabled={!isFormValid()}>
                             <MdSave/> Salvar

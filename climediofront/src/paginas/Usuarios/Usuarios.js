@@ -5,7 +5,7 @@ import { Form, Link } from "react-router-dom";
 import { Table } from "react-bootstrap";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useEffect, useState } from "react";
-import UsuarioApi from "../../services/Usuario.Api";
+import UsuarioApi from "../../services/UsuarioApi";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
@@ -18,15 +18,15 @@ function Usuarios() {
   const [tiposUsuarios, setTiposUsuarios] = useState([]);
   const [tipoUsuarioSelecionado, setTipoUsuarioSelecionado] = useState("");
 
-  const handleClickDeletar = (usuario) => {
-    setUsuarioSelecionado(usuario);
+  const handleClickDeletar = (id) => {
+    setUsuarioSelecionado(id);
     setMostrarModal(true);
   };
 
   const handleDeletar = async () => {
     try {
-      await UsuarioApi.deletarAsync(usuarioSelecionado.id);
-      setUsuarios(usuarios.filter((u) => u.id !== usuarioSelecionado.id));
+      await UsuarioApi.deletarAsync(usuarioSelecionado);
+      carregarUsuarios();
     } catch (error) {
       console.error("Erro ao deletar usuário:", error);
     } finally {
@@ -44,7 +44,6 @@ function Usuarios() {
   async function carregarUsuarios() {
     try {
       const listaUsuarios = await UsuarioApi.listarUsuarios();
-      console.log("AQUIIIIII", listaUsuarios);
       setUsuarios(listaUsuarios);
     } catch (error) {
       console.error("Erro ao carregar usuários:", error);
@@ -85,15 +84,15 @@ function Usuarios() {
                     <td>{usuario.email}</td>
                     <td>{usuario.tipoUsuario}</td>
                     <td>
-                      <Link
+                      {/* <Link
                         to="/usuario/editar"
                         state={usuario.id}
                         className={style.botao_editar}
                       >
                         <MdEdit />
-                      </Link>
+                      </Link> */}
                       <button
-                        onClick={() => handleClickDeletar(usuario)}
+                        onClick={() => handleClickDeletar(usuario.usuarioId)}
                         className={style.botao_deletar}
                       >
                         <MdDelete />

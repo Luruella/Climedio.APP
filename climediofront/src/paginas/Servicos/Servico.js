@@ -23,7 +23,7 @@ function Servicos() {
 
           <div className={style.conteudo}>
           <div className={style.pagina_conteudo}>
-            <h2>Serviços</h2>
+            <h2>Conheça a nossa equipe</h2>
             <br></br>
             <h3>CLIMEDIO</h3>
             <h3>Clínica Médica e Odontológica</h3>
