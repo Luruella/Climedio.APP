@@ -7,6 +7,12 @@ const ModalAgendamento = ({ dia, horario, fecharModal }) => {
   const [pacientes, setPacientes] = useState([]);
   const [profissionais, setProfissionais] = useState([]);
 
+  const hoje = new Date();
+  const mesAtual = (hoje.getMonth() + 1).toString().padStart(2, "0");
+  const anoAtual = hoje.getFullYear();
+  const dataCompleta = `${dia}/${mesAtual}/${anoAtual}`;
+
+
   const [nomePaciente, setNomePaciente] = useState("");
   const [nomeProfissional, setNomeProfissional] = useState("");
   const [idPaciente, setIdPaciente] = useState(null); // Novo estado para armazenar o ID do paciente
@@ -17,6 +23,8 @@ const ModalAgendamento = ({ dia, horario, fecharModal }) => {
   const [profissionaisFiltrados, setProfissionaisFiltrados] = useState([]);
   const [loading, setLoading] = useState(false);
   const [erro, setErro] = useState("");
+
+  debugger
 
   const handlePacienteChange = (e) => {
     const valor = e.target.value;
@@ -94,15 +102,15 @@ const ModalAgendamento = ({ dia, horario, fecharModal }) => {
   };
 
   const combinarDataHora = () => {
-  const [ano, mes, diaFormatado] = dia.split("-");
-  const [hora, minutos] = horario.split(":");
+    const [ano, mes, diaFormatado] = dia.split("-");
+    const [hora, minutos] = horario.split(":");
 
-  const dateTime = new Date(
-    Date.UTC(ano, mes - 1, diaFormatado, hora, minutos)  // Usar mes - 1 porque meses começam de 0
-  );
+    const dateTime = new Date(
+      Date.UTC(ano, mes - 1, diaFormatado, hora, minutos)  // Usar mes - 1 porque meses começam de 0
+    );
 
-  return dateTime.toISOString();
-};
+    return dateTime.toISOString();
+  };
 
   async function carregarPacientes() {
     try {

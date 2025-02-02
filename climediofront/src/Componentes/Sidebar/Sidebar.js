@@ -17,9 +17,11 @@ function Sidebar({ children }) {
 
                 <div className={style.sidebar_corpo}>
                     <SidebarItem texto="Home" link="/" logo={<MdHome />} />
+                    <SidebarItem texto="Login" link="/login" logo={<MdGroup />} />
                     <SidebarItem texto="Usuarios" link="/usuarios" logo={<MdGroup />} />
                     <SidebarItem texto="Agendamentos" link="/agendamentos" logo={<MdInbox />} />
                     <SidebarItem texto="Equipe" link="/equipe" logo={<MdSort />} />
+                    <SidebarItem texto="Contato" link="/contato" logo={<MdSort />} />
                 </div>
             </div>
             <div className={style.pagina_conteudo}>

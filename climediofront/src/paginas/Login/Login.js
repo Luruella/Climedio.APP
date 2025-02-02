@@ -12,7 +12,8 @@ export function Login() {
     const [senha, setSenha] = useState('');
     const navigate = useNavigate();
 
-    async function Login() {
+    async function Entrar() {
+        debugger
         try {
             const id = await UsuarioApi.verificarLogin(email, senha);
             localStorage.setItem('usuarioId', id);
@@ -27,7 +28,7 @@ export function Login() {
                 </div>
                 <div className={style.conteudo_login}>
                     <img src={Logo} alt="logo" className={style.imagem_logo} />
-                    <Form onSubmit={(e) => { e.preventDefault(); Login() }}>
+                    <Form onSubmit={(e) => { e.preventDefault(); Entrar() }}>
 
                         <Form.Group controlId="formEmail" className="mb-3">
                             <Form.Control className={style.campos} type="email" placeholder="e-mail" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
