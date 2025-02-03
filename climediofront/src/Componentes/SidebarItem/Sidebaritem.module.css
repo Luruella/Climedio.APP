@@ -1,24 +1,19 @@
 .sidebar_item {
     text-decoration: none;
-
     display: flex;
     margin: 20px;
-
     color: #0a0a0a;
 
     & svg {
         width: 40px;
-        height: 44px;
+        height: 35px;
     }
 
     & .texto_link {
-        margin: 10px;
-
+        margin: 0%;
         font-size: 20px;
+        font-weight: bold;
+        margin-left: 10px;
     }
-
-    &:hover{
-        color: #f0e3e3;
-    }
-    
+     
 }

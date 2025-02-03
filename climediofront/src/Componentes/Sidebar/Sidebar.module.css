@@ -1,13 +1,10 @@
 .sidebar_conteudo {
     background-color: #bbafbb;
-
     position: fixed;
     top: 0;
     bottom: 0;
-
     width: 20%;
     height: 100%;
-
     overflow: hidden;
 }
 
@@ -18,13 +15,17 @@
 .sidebar_header {
     justify-content: center;
     text-align: center;
+    padding: none;    
 
     & .logo {
-        width: 80%;
-        margin: 10%;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;    
+        display: flex;
+      
     }
 
     & .linha {
-        color: rgba(250, 234, 214, 0.4);
+        color: rgba(19, 19, 19, 0.4);
     }
 }
