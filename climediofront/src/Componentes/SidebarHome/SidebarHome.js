@@ -1,11 +1,11 @@
-import style from './Sidebar.module.css';
+import style from './SidebarHome.module.css';
 import Logo from '../../assets/LogoClimedio.png';
 import SidebarItem  from '../SidebarItem/SidebarItem';
 import { MdGroup, MdSort } from "react-icons/md";
 import { MdInbox } from "react-icons/md";
 import { MdHome } from "react-icons/md";
 
-function Sidebar({ children }) {
+function SidebarHome({ children }) {
     return (
         <div>
             <div className={style.sidebar_conteudo}>
@@ -16,9 +16,9 @@ function Sidebar({ children }) {
                 </div>
 
                 <div className={style.sidebar_corpo}>
-                    <SidebarItem texto="Usuarios" link="/usuarios" logo={<MdGroup />} />
-                    <SidebarItem texto="Agendamentos" link="/agendamentos" logo={<MdInbox />} />
-                    
+                    <SidebarItem texto="História" link="/" logo={<MdHome />} />
+                    <SidebarItem texto="Equipe" link="/equipe" logo={<MdSort />} />
+                    <SidebarItem texto="Contato" link="/contato" logo={<MdSort />} />
                 </div>
             </div>
             <div className={style.pagina_conteudo}>
@@ -28,4 +28,4 @@ function Sidebar({ children }) {
     )
 }
 
-export default Sidebar;
+export default SidebarHome;

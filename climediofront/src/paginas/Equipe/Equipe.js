@@ -1,6 +1,6 @@
 import Sidebar from "../../Componentes/Sidebar/Sidebar";
 import Topbar from "../../Componentes/Topbar/Topbar";
-import style from "../Servicos/Servico.module.css";
+import style from "./Equipe.module.css";
 import Sanches from "../../assets/Sanches.png";
 import Bruna from "../../assets/Bruna.png";
 import Cristiano from "../../assets/Cristiano.png";
@@ -12,7 +12,7 @@ import Paula from "../../assets/Paula.png";
 import Marcela from "../../assets/Marcela.png";
 
 
-function Servicos() {
+function Equipe() {
   return (
    
       
@@ -91,4 +91,4 @@ function Servicos() {
   );
 }
 
-export default Servicos;
+export default Equipe;

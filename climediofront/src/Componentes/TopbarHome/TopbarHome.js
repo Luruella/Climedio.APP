@@ -1,12 +1,12 @@
-import style from './Topbar.module.css';
+import style from './TopbarHome.module.css';
 import { Link } from 'react-router-dom';
 import { MdLogout } from 'react-icons/md';
 
-function Topbar({ children }) {
+function TopbarHome({ children }) {
     return (
         <div>
             <div className={style.topbar_conteudo}>
-                <Link to='/Login' className={style.botao_login}>Sair</Link>
+                <Link to='/Login' className={style.botao_login}>Entrar</Link>
             </div>
             <div className={style.pagina_conteudo}>
                 {children}
@@ -14,4 +14,4 @@ function Topbar({ children }) {
         </div>
     )
 }
-export default Topbar;
+export default TopbarHome;

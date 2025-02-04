@@ -17,7 +17,7 @@ export function Login() {
         try {
             const id = await UsuarioApi.verificarLogin(email, senha);
             localStorage.setItem('usuarioId', id);
-            navigate('/');
+            navigate('/usuarios');
         } catch (error) {
         }
     }

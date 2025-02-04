@@ -1,13 +1,13 @@
-import Sidebar from "../../Componentes/Sidebar/Sidebar";
-import Topbar from "../../Componentes/Topbar/Topbar";
+import TopbarHome from "../../Componentes/TopbarHome/TopbarHome";
 import style from "./Home.module.css";
 import fotoEquipe from "../../assets/5.png";
+import SidebarHome from "../../Componentes/SidebarHome/SidebarHome";
 
 function Home() {
   return (
     <div className={style.conteudo}>
-      <Sidebar>
-        <Topbar>
+      <SidebarHome>
+        <TopbarHome>
           <div className={style.pagina_conteudo}>
             <h3>Home</h3>
             <br></br>
@@ -45,8 +45,8 @@ function Home() {
               <img src={fotoEquipe} alt="fotoEquipe" className={style.logo} />
             </div>
           </div>
-        </Topbar>
-      </Sidebar>
+        </TopbarHome>
+      </SidebarHome>
     </div>
   );
 }
