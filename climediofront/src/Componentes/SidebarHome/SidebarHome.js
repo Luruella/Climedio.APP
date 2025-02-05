@@ -4,6 +4,7 @@ import SidebarItem  from '../SidebarItem/SidebarItem';
 import { MdGroup, MdSort } from "react-icons/md";
 import { MdInbox } from "react-icons/md";
 import { MdHome } from "react-icons/md";
+// import fundo from '../../assets/Fundo2.png';
 
 function SidebarHome({ children }) {
     return (
@@ -11,7 +12,7 @@ function SidebarHome({ children }) {
             <div className={style.sidebar_conteudo}>
                 <div className={style.sidebar_header}>
                     <img src={Logo} alt="fundo" className={style.logo} />
-
+                    {/* <img src = {fundo} alt="Fundo" className={style.fundo} /> */}
                
                 </div>
 

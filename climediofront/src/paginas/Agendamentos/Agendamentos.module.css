@@ -32,7 +32,7 @@
 
 .botao_deletar {
     border: none;
-    background-color: #ffffff;
+    background-color: #ebe9df;
 
     & svg:hover {
         color: #e4504b;

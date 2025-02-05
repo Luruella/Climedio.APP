@@ -9,7 +9,7 @@ function Home() {
       <SidebarHome>
         <TopbarHome>
           <div className={style.pagina_conteudo}>
-            <h3>Home</h3>
+            <h3>Nossa História</h3>
             <br></br>
             <h5>CLIMEDIO - Clínica Médica e Odontológica</h5>
             <br></br>
@@ -20,24 +20,24 @@ function Home() {
               1969. Em 1990 instalou seu consultório médico em Alfenas MG.
               Atendendo como especialista em Clínica Geral, Pneumologia,
               Hematologia Infectologia Broncoscopista e Intensivista. Em 2012,
-              trouxe para trabalhar com ele, sua filha Dra Marcela Assunção, tb
+              trouxe para trabalhar com ele, sua filha Dra. Marcela Assunção, tb
               formada em Medicina pela UNINCOR de BH em 2011. Nesse ano
               inauguraram a CLIMÉDIO, sendo sócios: Dr Sanchez, Dra. Marcela e
               Leny Sanchez que além de sócia, atuou tb como coordenadora por 11
               anos. Na Climédio, Dra. Marcela atende Clínica Geral e
-              Dermatologia, atuando tb na Santa casa como Diretora de Ética e
+              Dermatologia, atuando também na Santa casa como Diretora de Ética e
               internista . Em 2016 devido ao crescimento e necessidade, convidou
               para fazer parte de sua equipe a Esteticista Fabiana Oliveira
-              Viana ,e o enfermeiro Estômato Terapeuta Theo Leandro Lourenço .
+              Viana,e o enfermeiro Estômato Terapeuta Theo Leandro Lourenço .
               Em 2021, se encorporando à Climédio, chegou Dr. Cristiano
               Assunção, Dentista ,formado pela PUC em BH, especialista em
               cirurgia Buço Máximo facial, Periodontista,Protesista,
               Implantodontista. Tem como sua assistente a Auxiliar de Saúde
-              Bucal : Bruna Carolina Pereira. Fazendo parte de sua equipe á sua
-              equipe as dentistas : Dra. Renata Silveira e Dra Mariana Amorelli.
+              Bucal : Bruna Carolina Pereira. Fazendo parte de sua equipe
+              as dentistas: Dra. Renata Silveira e Dra Mariana Amorelli.
               Em 2022 Leny Sanchez transferiu seu Cargo de Coordenadora para
               Paula Morais com formação em Gestão de Pessoas em Recursos
-              Humanos. E temos tb uma colaboradora em Serviços Gerais , Simone
+              Humanos. E temos tb uma colaboradora em Serviços Gerais, Simone
               Cheder.
             </p>
             <div className={style.fotoEquipe}>

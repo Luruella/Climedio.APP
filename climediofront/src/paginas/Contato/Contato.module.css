@@ -9,28 +9,13 @@
     font-family: 'Arial', sans-serif;
     padding: 20px;
     width: 100%;
-    height: 100%;
+    height: 91vh;
     padding: 5%;
     background-color: #ebe9df;
 }
 
-.logo{
-  
-    width: 500px;
- }
-
-.fotoEquipe{
-    display: flex;
-    justify-content: center;
-}
 
 .textoHome{
     text-align: justify;
 }
 
-h5{
-    font-size: 18px;
-    color: #111111;
-    font-weight: 400;
-
-}

@@ -10,14 +10,16 @@ import Simone from "../../assets/Simone.png";
 import Theo from "../../assets/Theo.png";
 import Paula from "../../assets/Paula.png";
 import Marcela from "../../assets/Marcela.png";
+import TopbarHome from "../../Componentes/TopbarHome/TopbarHome";
+import SidebarHome from "../../Componentes/SidebarHome/SidebarHome";
 
 
 function Equipe() {
   return (
    
       
-        <Topbar>
-          <Sidebar>
+        <TopbarHome>
+          <SidebarHome>
             <div>
 
 
@@ -25,13 +27,13 @@ function Equipe() {
           <div className={style.pagina_conteudo}>
             <h2>Conheça a nossa equipe</h2>
             <br></br>
+            <br></br>
             <h3>CLIMEDIO</h3>
             <h3>Clínica Médica e Odontológica</h3>
             <br></br>
 
-            <h5>Dr. Fedor Sanchez Pedemonte, Especialista em Clínica Geral,
-              Pneumologia, Hematologia Infectologia Broncoscopista e
-              Intensivista.{" "}</h5>
+            <h5>Dr. Fedor Sanchez Pedemonte, Especialista em Clínica Geral,Pneumologia,
+            <br></br> Hematologia Infectologia Broncoscopista e Intensivista.{" "}</h5>
             <div className={style.Sanches}>{" "}<img src={Sanches} alt="Sanches" className={style.logo} /></div>
             <br></br>
 
@@ -40,13 +42,13 @@ function Equipe() {
             <br></br>
 
             <h5>
-              Coordenadora: Paula Morais, com formação em Gestão de Pessoas
-              em Recursos Humanos.{" "}</h5>
+              Coordenadora: Paula Morais, com formação em
+              <br></br>Gestão de Pessoas              em Recursos Humanos.{" "}</h5>
               <div className={style.Paula}>{" "}<img src={Paula} alt="Paula" className={style.logo} /></div>
             <br></br>
 
-            <h5>Dra. Marcela Clínica Geral e Dermatologia, atuando atualmente na
-              Santa Casa como Diretora de Ética e Internista.
+            <h5>Dra. Marcela Clínica Geral e Dermatologia, atuando atualmente
+            <br></br> na Santa Casa como Diretora de Ética e Internista.
             </h5>
             <div className={style.Marcela}>{" "}<img src={Marcela} alt="Marcela" className={style.logo} /></div>
             <br></br>
@@ -59,9 +61,8 @@ function Equipe() {
             <div className={style.Theo}>{" "}<img src={Theo} alt="Theo" className={style.logo} /></div>
             <br></br>
 
-            <h5>Dr.Cristiano Assunção, Dentista,formado pela PUC em BH,
-              Especialista em Cirurgia Buço Máximo facial, Periodontista,
-              Protesista, Implantodontista.</h5>
+            <h5>Dr.Cristiano Assunção, Dentista,formado pela PUC em BH, Especialista em Cirurgia
+            <br></br> Buço Máximo facial, Periodontista, Protesista, Implantodontista.</h5>
             <div className={style.Cristiano}>{" "}<img src={Cristiano} alt="Cristiano" className={style.logo} /></div>
             <br></br>
 
@@ -84,8 +85,8 @@ function Equipe() {
 
             </div>
     
-            </Sidebar>
-        </Topbar>
+            </SidebarHome>
+        </TopbarHome>
      
    
   );

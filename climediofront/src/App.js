@@ -7,6 +7,9 @@ import { NovoUsuario } from './paginas/NovoUsuario/NovoUsuario';
 import { EditarUsuario } from './paginas/EditarUsuario/EditarUsuario';
 import { Login } from './paginas/Login/Login';
 import { PageAgendamentos } from './paginas/Agendamentos/Agendamentos';
+import Contato from './paginas/Contato/Contato';
+
+
 
 
 function App() {
@@ -17,10 +20,12 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/usuarios' element={<Usuarios />} />
         <Route path='/Equipe' element={<Equipe />} />
+        <Route path='/Contato' element={<Contato />} />
         <Route path='/NovoUsuario' element={<NovoUsuario />} />
         <Route path='/EditarUsuario' element={<EditarUsuario />} />
         <Route path ='/Login' element = {<Login/>}/>
         <Route path ='/Agendamentos' element = {<PageAgendamentos/>}/>
+        {/* <Route path='/EditarAgendamento' element={<EditarAgendamento />} /> */}
 
        
       </Routes>
