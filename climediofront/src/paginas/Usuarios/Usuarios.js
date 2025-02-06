@@ -1,7 +1,7 @@
 import Sidebar from "../../Componentes/Sidebar/Sidebar";
 import Topbar from "../../Componentes/Topbar/Topbar";
 import style from "./Usuarios.module.css";
-import { Form, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Table } from "react-bootstrap";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useEffect, useState } from "react";
@@ -39,8 +39,6 @@ function Usuarios() {
     setUsuarioSelecionado(null);
   };
 
-
-
   async function carregarUsuarios() {
     try {
       const listaUsuarios = await UsuarioApi.listarUsuarios();
@@ -65,10 +63,8 @@ function Usuarios() {
             </Link>
           </div>
 
-          
-
           <div className={style.tabela}>
-            <Table responsive>
+            <Table responsive id={style.larguratabela}>
               <thead className={style.tabela_cabecalho}>
                 <tr>
                   <th>Nome</th>
@@ -84,13 +80,13 @@ function Usuarios() {
                     <td>{usuario.email}</td>
                     <td>{usuario.tipoUsuario}</td>
                     <td>
-                      {/* <Link
+                      <Link
                         to="/usuario/editar"
-                        state={usuario.id}
+                        state={usuario.usuarioId}
                         className={style.botao_editar}
                       >
                         <MdEdit />
-                      </Link> */}
+                      </Link>
                       <button
                         onClick={() => handleClickDeletar(usuario.usuarioId)}
                         className={style.botao_deletar}

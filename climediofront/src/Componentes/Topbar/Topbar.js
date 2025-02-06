@@ -1,12 +1,12 @@
 import style from './Topbar.module.css';
 import { Link } from 'react-router-dom';
-import { MdLogout } from 'react-icons/md';
+import { IoLogOutOutline } from "react-icons/io5";
 
 function Topbar({ children }) {
     return (
         <div>
             <div className={style.topbar_conteudo}>
-                <Link to='/Login' className={style.botao_login}>Sair</Link>
+                <Link to='/' className={style.botao_login}><IoLogOutOutline /></Link>
             </div>
             <div className={style.pagina_conteudo}>
                 {children}

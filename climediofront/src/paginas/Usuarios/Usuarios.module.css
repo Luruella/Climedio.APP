@@ -1,51 +1,70 @@
 .pagina_conteudo {
-    width: 100%;
-    height: 100%;
-    padding: 50px;
+  width: 100%;
+  height: 91vh;
+  padding: 50px;
+  background-color: #ebe9df81;
 }
 
 .tabela {
-    margin-top: 30px;
+  margin-top: 60px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  
+  
+}
+
+#larguratabela {
+  border: 1px solid #cec5ba;
+  margin: 0;
+  
+
 }
 
 .tabela_corpo svg {
-    color: #212529;
-
-    margin: 5px;
-    font-size: 25px;
+  color: #212529;
+  margin: 10px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: auto;
 }
 
 .botao_editar svg:hover {
-    color: #be7d47e3;
+  color: #a0846de3;
 }
 
 .botao_deletar {
-    border: none;
-    background-color: #ffffff;
+  border: none;
+  background-color: #ffffff;
 
-    & svg:hover {
-        color: #883f3d;
-    }
+  & svg:hover {
+    color: #883f3d;
+  }
 }
 
-th{
-    width: 25%;
+th {
+  width: 25%;
 }
 
 .pagina_cabecalho {
+  display: flex;
+  justify-content: space-between;
+
+  & .botao_novo {
+    text-decoration: none;
+    color: #020202;
+    font-size: 2.5vh;
     display: flex;
-    justify-content: space-between;
+    border: 2px solid #cec5ba;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #cec5ba98;
 
-    & .botao_novo {
-        text-decoration: none;
-
-        color: white;
-
-        padding: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-
-        border-radius: 10px;
-        background-color: #f08830;
+    /* Correção: Remova o & extra */
+    &:hover {
+      background-color: #cec5ba;
+      color: #020202;
     }
+  }
 }
+
+

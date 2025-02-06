@@ -1,8 +1,9 @@
 .sidebar_item {
     text-decoration: none;
     display: flex;
-    margin: 20px;
-    color: #573401;
+    align-items: center;
+    margin: 15px;
+    color: #555042;
 
     & svg {
         width: 40px;
@@ -11,9 +12,19 @@
 
     & .texto_link {
         margin: 0%;
-        font-size: 20px;
+
+        font-size: 18px;
         font-weight: bold;
         margin-left: 10px;
     }
+    &:hover{
+        color: #000000;
+        
+    }
      
+}
+
+.active {
+    color: black;
+    font-weight: bold;
 }

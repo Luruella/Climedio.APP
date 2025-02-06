@@ -63,6 +63,16 @@ const UsuarioApi = {
         }
     },
 
+    async atualizarInformacoesAsync(usuarioAtualizar) {
+        try {
+            const response = await HTTPClient.put(`/Usuario/AtualizarInformacoes`, usuarioAtualizar);
+            return response.data;
+        } catch (error) {
+            console.error("Erro ao atualizar usuário:", error);
+            throw error;
+        }
+    },
+
     async deletarAsync(id) {
         try {
             const response = await HTTPClient.delete(`/Usuario/Remover/${id}`);

@@ -8,6 +8,7 @@ import { EditarUsuario } from './paginas/EditarUsuario/EditarUsuario';
 import { Login } from './paginas/Login/Login';
 import { PageAgendamentos } from './paginas/Agendamentos/Agendamentos';
 import Contato from './paginas/Contato/Contato';
+import NovoAgendamento from './paginas/NovoAgendamento/NovoAgendamento';
 
 
 
@@ -22,10 +23,10 @@ function App() {
         <Route path='/Equipe' element={<Equipe />} />
         <Route path='/Contato' element={<Contato />} />
         <Route path='/NovoUsuario' element={<NovoUsuario />} />
-        <Route path='/EditarUsuario' element={<EditarUsuario />} />
+        <Route path='/Usuario/Editar' element={<EditarUsuario />} />
         <Route path ='/Login' element = {<Login/>}/>
         <Route path ='/Agendamentos' element = {<PageAgendamentos/>}/>
-        {/* <Route path='/EditarAgendamento' element={<EditarAgendamento />} /> */}
+        <Route path='/NovoAgendamento' element={<NovoAgendamento />} />
 
        
       </Routes>

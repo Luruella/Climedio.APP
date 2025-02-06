@@ -1,90 +1,56 @@
 .conteudo {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ebe9df;
 }
 
-
-
-.imagem_esquerda 
-{
-    width: 50vw;
-    height: 100vh;
+.imagem_logo {
+  width: 120%;
+  margin-bottom: 5vh;
+  justify-content: center;
 }
 
-.imagem_direitaAlta 
-{
-    width: 100%;
+.conteudo_esquerda {
+  display: flex;
+  justify-content: flex-start;
+  width: 15vw;
 }
 
-.imagem_logo{
-    width: 90%;
-    margin-bottom: 20vh;
+.conteudo_login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+  margin-left: 22.5vw;
+  margin-right: 22.5vw;
+  margin-top: 0%;
 }
 
-.imagem_direitaBaixa 
-{
-    width: 60%;
-}
-
-.esqueci_minha_senha {
-    display: flex;
-    text-decoration: none;
-    color: #ED8731;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.conteudo_esquerda 
-{
-    display: flex;
-    justify-content: flex-start;
-    width: 15vw;
-}
-
-.conteudo_login 
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 25vw;
-    margin-left: 22.5vw;
-    margin-right: 22.5vw;
-    gap: 1vh;
-}
-
-.conteudo_login Form{
-    width: 100%;
-}
-
-.conteudo_direita 
-{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 15vw;
+.conteudo_login Form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .campos {
-    border: 0 !important;
-    border-bottom: 1px solid !important;
-    border-radius: 0 !important;
-    margin-bottom: 3vh;
+  border-bottom: 2px solid !important;
 }
 
+
+
 .botao_entrar {
-    background-color: #ED8731 !important;
-    width: 100%;
-    border: none !important;
-    border-radius: 0 !important;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
+  border: none;
+  padding: 5px 20px;
+  background-color: #a37e609f;
+  border-radius: 5px;
+  margin-top: 2vh;
 }
 
 .aviso {
-    color: #ED8731;
-    text-align: center;
+  color: #a37e60;
+  text-align: center;
 }

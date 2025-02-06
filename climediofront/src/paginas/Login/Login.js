@@ -38,9 +38,9 @@ export function Login() {
                             <Form.Control className={style.campos} type="password" placeholder="senha" name="senha" value={senha} onChange={(e) => setSenha(e.target.value)} required />
                         </Form.Group>
 
-                        <Button variant="primary" type="submit" className={style.botao_entrar}>
+                        <button type="submit" className={style.botao_entrar}>
                             Entrar
-                        </Button>
+                        </button>
                     </Form>
                     {/* <Link to="/EsqueciSenha" className={style.esqueci_minha_senha}>esqueci minha senha</Link> */}
 

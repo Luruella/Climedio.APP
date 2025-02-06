@@ -13,10 +13,10 @@ const agendamentoApi = {
     }
   },
 
-  async listarAsync(ativos) {
+  async listarTodosAgendamentosAsync(ativos) {
     try {
       const response = await HTTPClient.get(
-        `/agendamento/Listar?ativos=${ativos}`
+        `/Agendamento/ListarTodosAgendamentos?ativo=${ativos}`
       );
       return response.data;
     } catch (error) {
