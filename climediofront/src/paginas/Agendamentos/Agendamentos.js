@@ -5,11 +5,21 @@ import { Link } from "react-router-dom";
 import Table from "react-bootstrap/Table";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useEffect, useState } from "react";
+import Modal from "react-bootstrap/Modal";
 
 import agendamentoApi from "../../services/AgendamentoApi";
+import { Button } from "react-bootstrap";
 
 export function PageAgendamentos() {
   const [agendamentos, setAgendamentos] = useState([]);
+
+
+  const [search, setSearch] = useState(""); // guarda o valor digitado na pesquisa
+  const [usuarios, setUsuarios] = useState([]);
+  const [mostrarModal, setMostrarModal] = useState(false);
+  const [agendamentoSelecionado, setUsuarioSelecionado] = useState(null);
+  const [tiposUsuarios, setTiposUsuarios] = useState([]);
+  const [tipoUsuarioSelecionado, setTipoUsuarioSelecionado] = useState("");
 
   async function carregarAgendamentos() {
     try {
@@ -21,6 +31,27 @@ export function PageAgendamentos() {
       console.error("Erro ao carregar agendamentos:", error);
     }
   }
+
+  const handleClickDeletar = (id) => {
+    setUsuarioSelecionado(id);
+    setMostrarModal(true);
+  };
+
+  const handleDeletar = async () => {
+    try {
+      await agendamentoApi.deletarAsync(agendamentoSelecionado);
+      carregarAgendamentos();
+    } catch (error) {
+      console.error("Erro ao deletar agendamento:", error);
+    } finally {
+      handleFecharModal();
+    }
+  };
+
+  const handleFecharModal = () => {
+    setMostrarModal(false);
+    setUsuarioSelecionado(null);
+  };
 
   useEffect(() => {
     carregarAgendamentos();
@@ -59,15 +90,8 @@ export function PageAgendamentos() {
                     </td>
 
                     <td>
-                      <Link
-                        to="/usuario/editar"
-                        // state={usuario.usuarioId}
-                        className={style.botao_editar}
-                      >
-                        <MdEdit />
-                      </Link>
                       <button
-                        // onClick={() => handleClickDeletar(usuario.usuarioId)}
+                        onClick={() => handleClickDeletar(agendamento.id)}
                         className={style.botao_deletar}
                       >
                         <MdDelete />
@@ -79,14 +103,14 @@ export function PageAgendamentos() {
             </Table>
           </div>
 
-          {/* <Modal show={mostrarModal} onHide={handleFecharModal}>
+           <Modal show={mostrarModal} onHide={handleFecharModal}>
             <Modal.Header closeButton>
               <Modal.Title>Confirmar</Modal.Title>
             </Modal.Header>
 
             <Modal.Body>
               Tem certeza que deseja deletar o usuário{" "}
-              {usuarioSelecionado?.nome}?
+              {agendamentoSelecionado?.nome}?
             </Modal.Body>
 
             <Modal.Footer>
@@ -98,9 +122,10 @@ export function PageAgendamentos() {
                 Deletar
               </Button>
             </Modal.Footer>
-          </Modal> */}
+          </Modal> 
         </div>
       </Topbar>
     </Sidebar>
   );
 }
+

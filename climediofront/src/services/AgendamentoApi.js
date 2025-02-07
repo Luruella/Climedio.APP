@@ -69,9 +69,7 @@ const agendamentoApi = {
 
   async deletarAsync(agendamentoId) {
     try {
-      const response = await HTTPClient.delete(
-        `/agendamento/Deletar/${agendamentoId}`
-      );
+      const response = await HTTPClient.delete(`/Agendamento/Remover/${agendamentoId}`);
       return response.data;
     } catch (error) {
       console.error("Erro ao deletar agendamento:", error);

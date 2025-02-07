@@ -5,8 +5,10 @@ import { Button, Form } from "react-bootstrap";
 import Sidebar from "../../Componentes/Sidebar/Sidebar";
 import Topbar from "../../Componentes/Topbar/Topbar";
 import style from "./NovoAgendamento.module.css";
+import { useNavigate } from "react-router-dom";
 
 function NovoAgendamento() {
+  const navigate = useNavigate();
   // Estado para armazenar os valores do formulário
   const [profissionalId, setProfissionalId] = useState("");
   const [pacienteId, setPacienteId] = useState("");
@@ -43,6 +45,7 @@ function NovoAgendamento() {
         dataHora,
         descricao
       );
+      navigate("/agendamentos");
       console.log("Agendamento criado com sucesso", response.data);
     } catch (error) {
       console.error("Erro ao criar agendamento:", error);
