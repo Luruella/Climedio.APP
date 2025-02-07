@@ -25,11 +25,11 @@ function Equipe() {
 
           <div className={style.conteudo}>
           <div className={style.pagina_conteudo}>
-            <h2>Conheça a nossa equipe</h2>
+            <h3>Conheça a nossa equipe</h3>
             <br></br>
-            <br></br>
-            <h3>CLIMEDIO</h3>
-            <h3>Clínica Médica e Odontológica</h3>
+      
+       
+            <h5>CLIMEDIO - Clínica Médica e Odontológica</h5>
             <br></br>
 
             <h5>Dr. Fedor Sanchez Pedemonte, Especialista em Clínica Geral,Pneumologia,

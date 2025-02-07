@@ -15,24 +15,12 @@
     width: 100%;
     height: 100%;
     padding: 5%;
-    background-color: #ebe9df;
+    background-color: #ebe9df81
   
     
     
   }
-  h2{
-      display: flex;
-      align-items:start;
-
-  }
-  
-  /* Títulos */
-  h3 {
-    font-size: 22px;
-    color: #333;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
+ 
   
  
   
@@ -48,17 +36,11 @@
     margin-bottom: 10px;
   }
   
-  .membro p {
-    font-size: 16px;
-    color: #eb0909;
-    margin-bottom: 15px;
-  }
-  
+   
   /* Estilo para as imagens dos membros */
   .logo {
     max-width: 200px;
-    height: 200px;
-    object-fit: cover;
+    height: 250px;
     border-radius: 50%;
     border: 3px solid #ddd;
     margin-top: 20px;

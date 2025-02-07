@@ -1,21 +1,38 @@
 .pagina_conteudo {
-   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-    width: 100%;
-    height: 91vh;
-    padding: 5%;
-    background-color: #ebe9df;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  width: 100%;
+  height: 91vh;
+  padding: 5%;
+  background-color: #ebe9df81;
 }
 
-
-.textoHome{
-    text-align: justify;
+.textoHome {
+  text-align: justify;
+}
+.p {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 20px;
+  display: flex;
 }
 
+.Comunicacao {
+    
+     display: flex;
+      gap: 50px;
+        justify-items: flex-start;  
+     
+  
+  & img {
+    width: 50px;   
+   
+    }
+}

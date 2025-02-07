@@ -9,7 +9,7 @@ function Home() {
       <SidebarHome>
         <TopbarHome>
           <div className={style.pagina_conteudo}>
-            <h3>Nossa História</h3>
+            <h3>Conheça Nossa História</h3>
             <br></br>
             <h5>CLIMEDIO - Clínica Médica e Odontológica</h5>
             <br></br>

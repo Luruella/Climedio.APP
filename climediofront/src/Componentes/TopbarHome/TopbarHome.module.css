@@ -14,15 +14,22 @@
     
     }
 
-.botao_login {
+.botao_login{
     text-decoration: none;
     color: #020202;
     font-size: 2.5vh;
     display: flex;
-    border:2px solid #555042;
-    border-radius:15%;
-    padding: 5px 10px;    
-    background-color:#cec5ba;
-    margin-right: 20px;
-   
-}
+    border: 2px solid #cec5ba;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #cec5ba98;
+
+    /* Correção: Remova o & extra */
+    &:hover {
+      background-color: #cec5ba;
+      color: #020202;
+    }
+  }
+
+

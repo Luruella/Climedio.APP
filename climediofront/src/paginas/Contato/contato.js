@@ -1,7 +1,9 @@
 import TopbarHome from "../../Componentes/TopbarHome/TopbarHome";
 import style from "./Contato.module.css";  
 import SidebarHome from "../../Componentes/SidebarHome/SidebarHome";
-import instagram from "../../assets/LogoClimedio.png";
+import Instagram from "../../assets/Instagram.png";
+import Whatss from "../../assets/Whatss.png";
+import LogoClimedio from "../../assets/LogoClimedio.png";
 
 function Contato() {
   return (
@@ -9,15 +11,17 @@ function Contato() {
       <SidebarHome>
         <TopbarHome>
           <div className={style.pagina_conteudo}>
-            <h3>Contato</h3>
+            <h3>Entre em contato conosco pelos nosos veículos de comunicação</h3>
             <br />
-            <h5>CLIMEDIO - Clínica Médica e Odontológica</h5>
+            <img src={LogoClimedio}></img>
             <br />
+
             <p className={style.textoContato}>
-              Serviços Gerais, Simone Cheder.
+              .
             </p>
-            <div className={style.fotoEquipe}>
-            <a href="https://www.instagram.com/" target="blank"><img src={instagram}/></a>
+            <div className={style.Comunicacao}>
+            <a href="https://www.instagram.com/climedio?igsh=azRzZg0cG9leDFx" target="blank"><img src={Instagram}/></a>
+            <a href="https://api.whatsapp.com/send?phone=5535988729091" target="blank"><img src={Whatss}/></a>
            
             </div>
           </div>

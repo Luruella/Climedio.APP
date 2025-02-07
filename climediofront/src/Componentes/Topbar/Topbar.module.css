@@ -15,15 +15,14 @@
     }
 
 .botao_login {
-    text-decoration: none;
+       text-decoration: none;
     color: #020202;
+    font-size: 2.5vh;
     display: flex;
+    border:2px solid #555042;
+    border-radius:15%;
+    padding: 5px 10px;    
+    background-color:#cec5ba;
     margin-right: 20px;
-    align-items: center;
-    justify-content: center;
-
-    & svg{
-        font-size: 28px;
-    }
    
 }
